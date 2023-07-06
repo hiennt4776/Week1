@@ -51,37 +51,37 @@ namespace Week1
         private void IncreaseSize()
         {
 
-            tableLayoutPanel1.Location = new System.Drawing.Point(25, 25);
-            label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button1.Width = 80;
-            button1.Height = 35;
+            tlpProduct1.Location = new System.Drawing.Point(25, 25);
+            lblDescription.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnAddCart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnAddCart.Width = 80;
+            btnAddCart.Height = 35;
 
-            button1.Location = new Point(
-                     (panel5.Width - button1.Width) / 2,
-                     (panel5.Height - button1.Height) / 2
+            btnAddCart.Location = new Point(
+                     (pnlAddCart.Width - btnAddCart.Width) / 2,
+                     (pnlAddCart.Height - btnAddCart.Height) / 2
                  );
 
            
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(350, 550);
+            this.tlpProduct1.Size = new System.Drawing.Size(350, 550);
         }
 
         private void DecreaseSize()
         {
-            if (!tableLayoutPanel1.ClientRectangle.Contains(tableLayoutPanel1.PointToClient(Control.MousePosition)))
+            if (!tlpProduct1.ClientRectangle.Contains(tlpProduct1.PointToClient(Control.MousePosition)))
             {
-                tableLayoutPanel1.Location = new System.Drawing.Point(50, 50);
-                label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+                tlpProduct1.Location = new System.Drawing.Point(50, 50);
+                lblDescription.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                btnAddCart.Anchor = System.Windows.Forms.AnchorStyles.None;
 
-                button1.Width = 75;
-                button1.Height = 30;
-                button1.Location = new Point(
-                          (panel5.Width - button1.Width) / 2,
-                          (panel5.Height - button1.Height) / 2
+                btnAddCart.Width = 75;
+                btnAddCart.Height = 30;
+                btnAddCart.Location = new Point(
+                          (pnlAddCart.Width - btnAddCart.Width) / 2,
+                          (pnlAddCart.Height - btnAddCart.Height) / 2
                       );
               
-                this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 500);
+                this.tlpProduct1.Size = new System.Drawing.Size(300, 500);
             }
         }
 

@@ -1,5 +1,4 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Week1
 {
-    public partial class Form2 : KryptonForm
+    public partial class Form17 : Form
     {
-        public Form2()
+        public Form17()
         {
             InitializeComponent();
-        }
-
-        private void kryptonButton2_Click(object sender, EventArgs e)
-        {
-       
         }
     }
 }

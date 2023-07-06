@@ -1,4 +1,4 @@
-﻿using DevExpress.Utils;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Week1.Form14;
-using static Week1.Form15;
-using Timer = System.Windows.Forms.Timer;
+
 
 namespace Week1
 {
@@ -21,13 +19,13 @@ namespace Week1
     {
         private const int PanelMoveDistanceAfterSleep = 4;
         private const int TimerSleep = 1;
-        private const int SizeParentPanelX = 1200;
-        private const int SizeParentPanelY = 600;
-        private const int LocationParentPanelX = 100;
-        private const int LocationParentPanelY = 60;
-        private const int SizeProductPanelX = 300;
-        private const int SizeProductPanelY = 500;
-        private const int LocationProductY = 50;
+        private const int SizeParentPanelX = 1200;//R
+        private const int SizeParentPanelY = 600;//R
+        private const int LocationParentPanelX = 100;////
+        private const int LocationParentPanelY = 60;////
+        private const int SizeProductPanelX = 300;//R
+        private const int SizeProductPanelY = 500;//R
+        private const int LocationProductY = 50; //
         private const int distanceMove = SizeParentPanelX / 3;
         private const int maxFor = distanceMove / PanelMoveDistanceAfterSleep; //phai chia het
         private const int distancePanel = distanceMove - SizeProductPanelX;
@@ -43,9 +41,8 @@ namespace Week1
         private const int zoomDistanceButtonX = 10;
         private const int zoomDistanceButtonY = 10;
 
-        private static Timer aTimer;
 
-
+       
         private Thread thread = new Thread(() => { });
         private Panel parentPanel;
         private List<Product> productList;
@@ -235,6 +232,11 @@ namespace Week1
 
         private void btnPreview_Click(object sender, EventArgs e)
          {
+            //if(newThread != null)
+            //{
+            //    newThread.Start();
+            //}
+
             if (thread == null || !thread.IsAlive)
             {
                 int k = previewProduct;
@@ -275,16 +277,23 @@ namespace Week1
                             }
                         }));
                     }
+
                  
                 });
                 thread.Start();
                 k = previewProduct;
                 RemovePanel();
                 //lblCountPanel.Text = countPanel().ToString();
-
+                
             }
+            //else
+            //{
+            //    newThread = new Thread(() => btnPreview_Click(null, null));
+               
+            //}
 
-           
+
+
         }
 
         private void RemovePanel()
@@ -325,12 +334,7 @@ namespace Week1
                 CreateProductPanel(parentPanel, LocationProductNextX, $"panelProduct{nextProduct}", Color.Blue, product);
                 RemovePanel();
 
-                //lblPreview.Text = previewProduct.ToString();
-
-                //lblNext.Text = nextProduct.ToString();
-
-                //lblCountPanel.Text = countPanel().ToString();
-                //MovePanels(-PanelMoveDistanceAfterSleep);
+              
 
                 thread = new Thread(() =>
                 {

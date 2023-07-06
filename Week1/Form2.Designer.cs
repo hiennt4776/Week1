@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.kryptonColorButton1 = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
@@ -133,6 +132,7 @@
             this.kryptonButton2.StateTracking.Border.Width = 1;
             this.kryptonButton2.TabIndex = 7;
             this.kryptonButton2.Values.Text = "Login";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // Form2
             // 
@@ -144,7 +144,6 @@
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonColorButton1);
             this.Name = "Form2";
-            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             this.ResumeLayout(false);

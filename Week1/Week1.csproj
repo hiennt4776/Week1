@@ -51,11 +51,6 @@
     <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <HintPath>..\packages\Krypton.Components.Suite.4.5.9\lib\net20\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -99,6 +94,12 @@
     <Compile Include="Form12.Designer.cs">
       <DependentUpon>Form12.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form13.Designer.cs">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form14.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +112,41 @@
     <Compile Include="Form15.Designer.cs">
       <DependentUpon>Form15.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form16.Designer.cs">
+      <DependentUpon>Form16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form17.Designer.cs">
+      <DependentUpon>Form17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form18.Designer.cs">
+      <DependentUpon>Form18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form19.Designer.cs">
+      <DependentUpon>Form19.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form20.Designer.cs">
+      <DependentUpon>Form20.cs</DependentUpon>
     </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
@@ -154,6 +185,15 @@
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
     <Compile Include="LocationPanel.cs" />
+    <Compile Include="MyControls\CarouselPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControls\ProductPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControls\YellowPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,14 +206,32 @@
     <EmbeddedResource Include="Form11.resx">
       <DependentUpon>Form11.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form13.resx">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form14.resx">
       <DependentUpon>Form14.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form15.resx">
       <DependentUpon>Form15.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form16.resx">
+      <DependentUpon>Form16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form17.resx">
+      <DependentUpon>Form17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form18.resx">
+      <DependentUpon>Form18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form19.resx">
+      <DependentUpon>Form19.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form20.resx">
+      <DependentUpon>Form20.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -216,6 +274,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Screenshot %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary5\ClassLibrary5.csproj">
+      <Project>{49ee84a9-4f64-4cad-8eb9-2e72eddfd1f9}</Project>
+      <Name>ClassLibrary5</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
